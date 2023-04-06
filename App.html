@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+<body onresize="sizeAdjustment()">
+  <div class="panel">
+    <div class="life">
+      <img id="v1" src="images/coracao_vazio.png" alt="coração vazio">
+      <img id="v2" src="images/coracao_cheio.png" alt="coração vazio">
+      <img id="v3" src="images/coracao_cheio.png" alt="coração vazio">
+    </div>
+    <div class="stopwatch">
+      Tempo restante: <span id="stopwatch"></span>
+    </div>
+  </div>
+
+
+
+  <script src="game.js"></script>
+  <script>
+    document.getElementById("stopwatch").innerHTML = time;
+
+   const makeMosca = setInterval(() => {
+      randomPosition()
+    }, makeTimeMosca)
+  </script>
+</body>
+</html>
